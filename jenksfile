@@ -3,4 +3,4 @@ library identifier: 'devops-shared-repo@master', retriever: modernSCM(
    remote: 'https://github.com/ranjith413/devops-shared-repo.git',
    credentialsId: 'github-token'])
 
-jenkinsfile()
+jenkinsfiletest()
