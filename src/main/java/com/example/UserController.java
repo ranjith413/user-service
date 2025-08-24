@@ -18,8 +18,5 @@ public class UserController {
         return restTemplate.getForObject(orderServiceUrl, String.class);
     }
 
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
+ 
 }
