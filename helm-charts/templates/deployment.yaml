@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-service
+  name: {{ .Values.appname }}
   labels:
-    app: user-service
+    app: {{ .Values.appname }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: user-service
+      app: {{ .Values.appname }}
   template:
     metadata:
       labels:
-        app: user-service
+        app: {{ .Values.appname }}
     spec:
       containers:
-        - name: user-service
-          image: {{ .Values.image.tag }}
+        - name: {{ .Values.appname }}
+          image: "{{ .Values.image.repository }}/{{ .Values.appname }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: 8080
