@@ -37,4 +37,10 @@ public class UserController {
             return "Error fetching user orders";
         }
     }
+
+    @GetMapping()
+    public String displayHome() {
+        logger.info("invoked /users endpoint");
+        return "Welcome to User Service!";
+    }
 }
