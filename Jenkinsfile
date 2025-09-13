@@ -3,7 +3,7 @@
     print job
     def appName = job[0]
     print appName
-    def tag = "v25"
+    def tag = "v2025"
 
 
     pipeline{
